@@ -1,0 +1,29 @@
+mkdir Work
+cd Work
+mkdir "Лабораторная работа №1"
+mkdir "ФИО"
+chmod a-rxw Лабораторная\ работа\ №1/ 
+chmod gu+rxw Лабораторная\ работа\ №1/
+chmod o+w Лабораторная\ работа\ №1/
+chmod a-rxw ФИО/
+chmod u+w ФИО/
+> "Text @1"
+> "Text $2"
+> "Text #3"
+echo -e "Птица говорун отличается умом и сообразительностью! \n Отличается умом, отличается сообразительностью!" > "Text @1"
+cat Text\ \@1 > Text\ \$2
+mv "Text \$2" "Лабораторная работа №1"/
+sudo cp "Text @1" "ФИО/"
+gzip Text\ @1
+gzip Text\ #3
+tar -cf MyArchive Text\ @1.gz Text\ #3.gz
+gzip -d Text\ @1.gz
+gzip -d Text\ #3.gz
+echo -e "Будь осторожен, преступник вооружен!" >> Text\ #3
+sudo touch ФИО/Result_one
+sudo tac Text\ @1 > ФИО/Result_one 
+mv ФИО/Result_one ФИО/Result_two
+touch Лабораторная\ работа\ №1/Result_3
+cat ФИО/T* > "Лабораторная работа №1/Result_3"
+uname -a >> "Лабораторная работа №1/Result_3"
+date >> "Лабораторная работа №1/Result_3"
